@@ -9,4 +9,5 @@ For story 3 I created an [Index page](https://github.com/Driventobraise/PythonLi
 Here I utilized a [web scraper](https://github.com/Driventobraise/PythonLiveProject/blob/main/views3.png) to pull article summarys and there authors from a web page and display them in my app. If I would have had more devlopment time I would have liked to add direct links to the full articles and display the images attached to the articles. 
 # Story 6 and 7(API):
 ''
-# [HOME](https://github.com/Driventobraise/PythonLiveProject/blob/main/home.png)[Characters](https://github.com/Driventobraise/PythonLiveProject/blob/main/add_character.png)[Index](https://github.com/Driventobraise/PythonLiveProject/blob/main/indexpg.png)[Articles](https://github.com/Driventobraise/PythonLiveProject/blob/main/webscraperpg.png)
+# [HOME](https://github.com/Driventobraise/PythonLiveProject/blob/main/home.png)| [CHARATERS](https://github.com/Driventobraise/PythonLiveProject/blob/main/add_character.png)| [INDEX](https://github.com/Driventobraise/PythonLiveProject/blob/main/indexpg.png)| [ARTICLES](https://github.com/Driventobraise/PythonLiveProject/blob/main/webscraperpg.png)
+Above are links to the app lay ouy. I had a lot more to do in the way of styling but for my first project I am ok with it.
