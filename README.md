@@ -6,7 +6,7 @@ I also added the abiltiy to create a [character](https://github.com/Driventobrai
 # Story 3, 4 and 5:
 For story 3 I created an [Index page](https://github.com/Driventobraise/PythonLiveProject/blob/main/index.png) to display all characters entered into the database. In Story 4 I added the functionality to [inspect](https://github.com/Driventobraise/PythonLiveProject/blob/main/detailspage.png) each entery. In Story 5 I added the ability to [edit](https://github.com/Driventobraise/PythonLiveProject/blob/main/editpage.png) and [delete](https://github.com/Driventobraise/PythonLiveProject/blob/main/views2.png) any database entery.
 # Story 6 and 7(Beautiful Soup):
-Here I utilized a [web scraper](https://github.com/Driventobraise/PythonLiveProject/blob/main/views3.png) to pull article summarys and there authors from a web page and display them in my app. If I would have had more devlopment time I would have liked to add direct links to the full articles and display the images attached to the articles. 
+Here I utilized a [web scraper](https://github.com/Driventobraise/PythonLiveProject/blob/main/views3.png) to pull article summarys and their authors from a web page and display them in my app. If I would have had more devlopment time I would have liked to add direct links to the full articles and display the images attached to the articles. 
 # Story 6 and 7(API):
 ''
 # [HOME](https://github.com/Driventobraise/PythonLiveProject/blob/main/home.png)| [CHARATERS](https://github.com/Driventobraise/PythonLiveProject/blob/main/add_character.png)| [INDEX](https://github.com/Driventobraise/PythonLiveProject/blob/main/indexpg.png)| [ARTICLES](https://github.com/Driventobraise/PythonLiveProject/blob/main/webscraperpg.png)
