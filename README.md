@@ -1,6 +1,7 @@
 # PythonLiveProject
 For two weeks my Team Mates and I worked on creating  Apps with Django.We each were responsible for our own Applications so I focused my time on building an App where you could store and update characters for your D and D campagin. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project, and at the very bottom is a look at the apps current state.
-
+# Starting my app and setting up the base model:
+For Story 1 I set up the basic structure for my app creating templates with Django. I utilized Django templating language to maintain a constant style throught the project. I had to use [url paths](https://github.com/Driventobraise/PythonLiveProject/blob/main/urlpatterns.png) and views based functions to render the different pages of the application. 
 ```
 
 # Home Page
@@ -32,8 +33,6 @@ def d_and_d_index(request):
     return render(request, 'DandDApp/DandD_index.html', {'page_obj': page_obj}, context)
     
 ```
-# Starting my app and setting up the base model:
-For Story 1 I set up the basic structure for my app creating templates with Django. I utilized Django templating language to maintain a constant style throught the project. I had to use [url paths](https://github.com/Driventobraise/PythonLiveProject/blob/main/urlpatterns.png) and views based functions to render the different pages of the application. 
 # Implementing crud functionalities:
 In story 2 I created [The Data Base Model](https://github.com/Driventobraise/PythonLiveProject/blob/main/DBmodel.png) and added the ability to create a [character](https://github.com/Driventobraise/PythonLiveProject/blob/main/views1.png) in the database. For story 3 I created an [Index page](https://github.com/Driventobraise/PythonLiveProject/blob/main/index.png) to display all characters entered into the database. I used the inbuilt django paginator class to create pagination for viewing the database entries. In Story 4 I added the functionality to [inspect](https://github.com/Driventobraise/PythonLiveProject/blob/main/detailspage.png) each entery. In Story 5 I added the ability to [edit](https://github.com/Driventobraise/PythonLiveProject/blob/main/editpage.png) and [delete](https://github.com/Driventobraise/PythonLiveProject/blob/main/views2.png) any database entery. Durning these steps I was using sqlite db and django queries to interact with the DB.
 # Beautiful Soup:
