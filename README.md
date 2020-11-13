@@ -1,5 +1,32 @@
 # PythonLiveProject
-For two weeks my Team Mates and I worked on creating  Apps with Django.We each were responsible for our own Applications so I focused my time on building an App where you could store and update characters for your D and D campagin. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project, and at the very bottom is a look at the apps current state. 
+For two weeks my Team Mates and I worked on creating  Apps with Django.We each were responsible for our own Applications so I focused my time on building an App where you could store and update characters for your D and D campagin. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project, and at the very bottom is a look at the apps current state.
+`code(# Home Page
+def d_and_d_home(request):
+    return render(request, 'DandDApp/DandD_home.html')
+
+
+# ADD- adds character to DB
+def add_character(request):
+    form = CreateCharacterForm(data=request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('d_and_d_home')
+    else:
+        print(form.errors)
+        form = CreateCharacterForm()
+    context = {'form': form}
+    return render(request, 'DandDApp/Add_Character.html', context)
+
+
+# Index--Shows all entries in DB
+def d_and_d_index(request):
+    form = CreateCharacterForm()
+    characters = CreateCharacter.object.all()
+    paginator = Paginator(characters, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {'form': form, 'characters': characters}
+    return render(request, 'DandDApp/DandD_index.html', {'page_obj': page_obj}, context))`
 # Starting my app and setting up the base model:
 For Story 1 I set up the basic structure for my app creating templates with Django. I utilized Django templating language to maintain a constant style throught the project. I had to use [url paths](https://github.com/Driventobraise/PythonLiveProject/blob/main/urlpatterns.png) and views based functions to render the different pages of the application. 
 # Implementing crud functionalities:
