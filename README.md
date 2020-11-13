@@ -38,5 +38,35 @@ def d_and_d_index(request):
 # Implementing crud functionalities:
 In story 2 I created [The Data Base Model](https://github.com/Driventobraise/PythonLiveProject/blob/main/DBmodel.png) and added the ability to create a [character](https://github.com/Driventobraise/PythonLiveProject/blob/main/views1.png) in the database. For story 3 I created an [Index page](https://github.com/Driventobraise/PythonLiveProject/blob/main/index.png) to display all characters entered into the database. I used the inbuilt django paginator class to create pagination for viewing the database entries. In Story 4 I added the functionality to [inspect](https://github.com/Driventobraise/PythonLiveProject/blob/main/detailspage.png) each entery. In Story 5 I added the ability to [edit](https://github.com/Driventobraise/PythonLiveProject/blob/main/editpage.png) and [delete](https://github.com/Driventobraise/PythonLiveProject/blob/main/views2.png) any database entery. Durning these steps I was using sqlite db and django queries to interact with the DB.
 # Beautiful Soup:
-During story 6 and 7 I utilized a [web scraper](https://github.com/Driventobraise/PythonLiveProject/blob/main/views4.png) to pull article summarys and their authors from dnd.wizards.com and rendered it on my articles page. In the future I would like to add direct links to the full articles and display the images attached to the articles. 
+During story 6 and 7 I utilized a [web scraper](https://github.com/Driventobraise/PythonLiveProject/blob/main/views4.png) to pull article summarys and their authors from dnd.wizards.com and rendered it on my articles page. In the future I would like to add direct links to the full articles and display the images attached to the articles.
+```
+{% extends "DandDApp/DandD_base.html" %}
+{% load static %}
+{% block title %}D&D | Articles{% endblock%}
+
+{% block header %}Check out the latest stories!{% endblock %}
+
+
+{% block content %}
+<table class="table" >
+      <thead class="index_display">
+        <tr>
+          <th scope="col">Author:</th>
+          <th scope="col">Summary:</th>
+        </tr>
+      </thead>
+      <tbody class="index_display">
+      <!--Loop through article/author list-->
+      {% for item in articleList %}
+        <tr>
+          <td>{{ item.Author }}</td>
+          <td>{{ item.Summary }}</td>
+       {% endfor %}
+        </tr>
+
+      </tbody>
+    </table>
+{% endblock %}
+
+```
 
