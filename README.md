@@ -69,4 +69,8 @@ During story 6 and 7 I utilized a [web scraper](https://github.com/Driventobrais
 {% endblock %}
 
 ```
-
+# Skills Learned
+* Learned VCS through Azure DevOps.
+* A deeper more meaningful understanding of Django.
+* How to utilize web-scraping.
+* Keeping up with a work load while working remotely.
