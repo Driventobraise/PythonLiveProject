@@ -1,5 +1,5 @@
 # PythonLiveProject
-For two weeks my Team Mates and I worked on creating  Apps with Django.We each were responsible for our own Applications so I focused my time on building an App where you could store and update characters for your D and D campagin. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project.
+For two weeks my Team Mates and I worked on creating  Apps with Django. We each were responsible for our own Applications so I focused my time on building an App where you could store and update characters for your D and D campagin. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project.
 # [HOME](https://github.com/Driventobraise/PythonLiveProject/blob/main/home2.png)| [CHARATERS](https://github.com/Driventobraise/PythonLiveProject/blob/main/add_character2.png)| [INDEX](https://github.com/Driventobraise/PythonLiveProject/blob/main/indexpg2.png)| [ARTICLES](https://github.com/Driventobraise/PythonLiveProject/blob/main/webscraperpg2.png)
 Above are links to the app lay ouy. I utilized bootstrap and basic css for styling, in the future I would like to refine my look for the app.
 # Starting my app and setting up the base model:
