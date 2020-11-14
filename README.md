@@ -3,37 +3,40 @@ For two weeks my teammates and I worked on creating  Apps with Django. On this f
 # [HOME](https://github.com/Driventobraise/PythonLiveProject/blob/main/home2.png)| [CHARACTERS](https://github.com/Driventobraise/PythonLiveProject/blob/main/add_character3.png)| [INDEX](https://github.com/Driventobraise/PythonLiveProject/blob/main/indexpg2.png)| [ARTICLES](https://github.com/Driventobraise/PythonLiveProject/blob/main/webscraperpg2.png)
 Above are links to the app layout. I utilized bootstrap and basic css for styling, in the future I would like to refine my look for the app.
 # Starting my app :
-For Story 1 I set up the basic structure for my app creating templates with Django. I utilized Django templating language to maintain a constant style throught the project. I had to use [url paths](https://github.com/Driventobraise/PythonLiveProject/blob/main/urlpatterns.png) and views based functions to render the different pages of the application.
+For Story 1 I set up the basic structure for my app creating templates with Django. I utilized Django template inheritance to maintain a constant style throughout the project. I created a base template that I extended on all the pages of my app. I had to use [url paths](https://github.com/Driventobraise/PythonLiveProject/blob/main/urlpatterns.png) and views based functions to render the different pages of the application.
 * Views Function for rendering Home page and Character page
 ```
 
-# Home Page
-def d_and_d_home(request):
-    return render(request, 'DandDApp/DandD_home.html')
+{% load staticfiles %}
 
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Dungeons and Dragons App{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap css links -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/DandD.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Playball" rel="stylesheet" type="text/css">
+    </head>
 
-# ADD- adds character to DB
-def add_character(request):
-    form = CreateCharacterForm(data=request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('d_and_d_home')
-    else:
-        print(form.errors)
-        form = CreateCharacterForm()
-    context = {'form': form}
-    return render(request, 'DandDApp/Add_Character.html', context)
+    <body>
+        <div class="homeimage">
+            {% include './DandD_navbar.html' %}
+            <div class="title">
+                <h1>{% block header %}{% endblock %}</h1>
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+            {% include './DandD_footer.html' %}
 
-
-# Index--Shows all entries in DB
-def d_and_d_index(request):
-    form = CreateCharacterForm()
-    characters = CreateCharacter.object.all()
-    paginator = Paginator(characters, 5)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    context = {'form': form, 'characters': characters}
-    return render(request, 'DandDApp/DandD_index.html', {'page_obj': page_obj}, context)
+        <!-- Bootstrap javascript links -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"    crossorigin="anonymous"></script>
+    </body>
+</html>
     
 ```
 # Implementing CRUD (create, read, update- delete) functionalities :
