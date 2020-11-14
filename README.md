@@ -41,39 +41,33 @@ In story 2 I created [The Data Base Model](https://github.com/Driventobraise/Pyt
 # Beautiful Soup:
 During story 6 and 7 I utilized a [web scraper](https://github.com/Driventobraise/PythonLiveProject/blob/main/views4.png) to pull article summaries and their authors from dnd.wizards.com and rendered it on my articles page. In the future I would like to add direct links to the full articles and display the images attached to the articles.
 
-* Template for receiving web-scrapping
+* views function for web-scrapping
 ```
-{% extends "DandDApp/DandD_base.html" %}
-{% load static %}
-{% block title %}D&D | Articles{% endblock%}
+# Article -- uses beautiful soup to parse page for article summaries and authors.
+def d_and_d_article(request):
+    page = requests.get("https://dnd.wizards.com/articles")
+    soup = BeautifulSoup(page.content, 'html.parser')
+    articles = soup.find_all('div', class_='content')
+    articleList = []
+    for item in articles:
+        Author = item.find(class_='author')
+        if Author is not None:
+            # prints authors name to console
+            print(Author.find('a').text)
+            # .text is calling on the beautiful soup property to pull text
+            AuthorRefined = Author.find('a').text
+            Summary = item.find(class_='summary').text
+            artsum = {"Author": AuthorRefined, "Summary": Summary}
 
-{% block header %}Check out the latest stories!{% endblock %}
+            articleList.append(artsum)
+    # prints article author and summary to console 
+    print(articleList)
 
-
-{% block content %}
-<table class="table" >
-      <thead class="index_display">
-        <tr>
-          <th scope="col">Author:</th>
-          <th scope="col">Summary:</th>
-        </tr>
-      </thead>
-      <tbody class="index_display">
-      <!--Loop through article/author list-->
-      {% for item in articleList %}
-        <tr>
-          <td>{{ item.Author }}</td>
-          <td>{{ item.Summary }}</td>
-       {% endfor %}
-        </tr>
-
-      </tbody>
-    </table>
-{% endblock %}
+    return render(request, 'DandDApp/DandD_soup.html', {'articleList': articleList})
 
 ```
 # Skills Learned
-* Learned VCS through Azure DevOps.
+* Learned VCS through Azure DevOps and Git.
 * A deeper more meaningful understanding of Django.
 * learning to use technologies new to me like web scraping.
 * Keeping up with a work load while working remotely.
