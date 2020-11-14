@@ -74,7 +74,7 @@ def d_and_d_article(request):
     return render(request, 'DandDApp/DandD_soup.html', {'articleList': articleList})
 
 ```
-# Skills Learned
+# Skills Learned :
 * Learned VCS through Azure DevOps and Git.
 * A deeper more meaningful understanding of Django.
 * learning to use technologies new to me like web scraping.
