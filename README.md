@@ -2,7 +2,7 @@
 For two weeks my teammates and I worked on creating  Apps with Django. On this full stack project we each were responsible for our own applications, so I focused my time on building an App where you could store and update characters for your Dungeons and Dragons campaign. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project.
 # [HOME](https://github.com/Driventobraise/PythonLiveProject/blob/main/home2.png)| [CHARACTERS](https://github.com/Driventobraise/PythonLiveProject/blob/main/add_character2.png)| [INDEX](https://github.com/Driventobraise/PythonLiveProject/blob/main/indexpg2.png)| [ARTICLES](https://github.com/Driventobraise/PythonLiveProject/blob/main/webscraperpg2.png)
 Above are links to the app layout. I utilized bootstrap and basic css for styling, in the future I would like to refine my look for the app.
-# Starting my app:
+# Starting my app :
 For Story 1 I set up the basic structure for my app creating templates with Django. I utilized Django templating language to maintain a constant style throught the project. I had to use [url paths](https://github.com/Driventobraise/PythonLiveProject/blob/main/urlpatterns.png) and views based functions to render the different pages of the application.
 * Views Function for rendering Home page and Character page
 ```
@@ -36,9 +36,14 @@ def d_and_d_index(request):
     return render(request, 'DandDApp/DandD_index.html', {'page_obj': page_obj}, context)
     
 ```
-# Implementing CRUD (create, read,update- delete) functionalities:
-In story 2 I created [The Data Base Model](https://github.com/Driventobraise/PythonLiveProject/blob/main/DBmodel.png) and added the ability to create a [character](https://github.com/Driventobraise/PythonLiveProject/blob/main/views1.png) in the database. For story 3 I created an [Index page](https://github.com/Driventobraise/PythonLiveProject/blob/main/index.png) to display all characters entered into the database. I used the inbuilt django paginator class to create pagination for viewing the database entries. In Story 4 I added the functionality to [read](https://github.com/Driventobraise/PythonLiveProject/blob/main/detailspage.png) each entery. In Story 5 I added the ability to [edit](https://github.com/Driventobraise/PythonLiveProject/blob/main/editpage.png) and [delete](https://github.com/Driventobraise/PythonLiveProject/blob/main/views2.png) any database entry. During these steps I was using sqlite db and django queries to interact with the DB.
-# Beautiful Soup:
+# Implementing CRUD (create, read, update- delete) functionalities :
+* ## Create :
+In story 2 I created [The Data Base Model](https://github.com/Driventobraise/PythonLiveProject/blob/main/DBmodel.png) and added a views function that rendered the create Character  page. I then added the ability to create a [character](https://github.com/Driventobraise/PythonLiveProject/blob/main/views1.png) and save it in the database .  
+* ## Read :
+For story 3 I created an [Index page](https://github.com/Driventobraise/PythonLiveProject/blob/main/index.png) to display all characters entered into the database. I used the inbuilt django paginator class to create pagination for viewing the database entries. In Story 4 I added the functionality to [read](https://github.com/Driventobraise/PythonLiveProject/blob/main/detailspage.png) each entery by using a views function that finds the single desired instance from the database and sending it to the details template.
+* ## Update - Delete :
+In Story 5 I added the ability to [edit](https://github.com/Driventobraise/PythonLiveProject/blob/main/editpage.png) and [delete](https://github.com/Driventobraise/PythonLiveProject/blob/main/views2.png) any database entry. During these steps I was using sqlite db and django queries to interact with the DB.
+# Beautiful Soup :
 During story 6 and 7 I utilized a [web scraper](https://github.com/Driventobraise/PythonLiveProject/blob/main/views4.png) to pull article summaries and their authors from dnd.wizards.com and rendered it on my articles page. In the future I would like to add direct links to the full articles and display the images attached to the articles.
 
 * views function for web-scrapping
