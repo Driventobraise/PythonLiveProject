@@ -1,5 +1,5 @@
 # PythonLiveProject
-For two weeks my teammates and I worked on creating  Apps with Django. We each were responsible for our own Applications so I focused my time on building an App where you could store and update characters for your Dungeons and Dragons campaign. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project.
+For two weeks my teammates and I worked on creating  Apps with Django. On this full stack project we each were responsible for our own applications, so I focused my time on building an App where you could store and update characters for your Dungeons and Dragons campaign. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project.
 # [HOME](https://github.com/Driventobraise/PythonLiveProject/blob/main/home2.png)| [CHARACTERS](https://github.com/Driventobraise/PythonLiveProject/blob/main/add_character2.png)| [INDEX](https://github.com/Driventobraise/PythonLiveProject/blob/main/indexpg2.png)| [ARTICLES](https://github.com/Driventobraise/PythonLiveProject/blob/main/webscraperpg2.png)
 Above are links to the app layout. I utilized bootstrap and basic css for styling, in the future I would like to refine my look for the app.
 # Starting my app:
@@ -75,5 +75,6 @@ During story 6 and 7 I utilized a [web scraper](https://github.com/Driventobrais
 # Skills Learned
 * Learned VCS through Azure DevOps.
 * A deeper more meaningful understanding of Django.
-* How to utilize web-scraping.
+* learning to use technologies new to me like web scraping.
 * Keeping up with a work load while working remotely.
+* learning to investigate errors and solve them.
