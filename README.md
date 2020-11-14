@@ -4,7 +4,7 @@ For two weeks my teammates and I worked on creating  Apps with Django. On this f
 Above are links to the app layout. I utilized bootstrap and basic css for styling, in the future I would like to refine my look for the app.
 # Starting my app :
 For Story 1 I set up the basic structure for my app creating templates with Django. I utilized Django template inheritance to maintain a constant style throughout the project. I created a base template that I extended on all the pages of my app. I had to use [url paths](https://github.com/Driventobraise/PythonLiveProject/blob/main/urlpatterns.png) and views based functions to render the different pages of the application.
-* Views Function for rendering Home page and Character page
+* Base HTML Template that my other pages inherited.
 ```
 
 {% load staticfiles %}
