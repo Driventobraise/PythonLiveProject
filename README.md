@@ -43,6 +43,9 @@ In story 2 I created [The Data Base Model](https://github.com/Driventobraise/Pyt
 For story 3 I created an [Index page](https://github.com/Driventobraise/PythonLiveProject/blob/main/index.png) to display all characters entered into the database. I used the inbuilt django paginator class to create pagination for viewing the database entries. In Story 4 I added the functionality to [read](https://github.com/Driventobraise/PythonLiveProject/blob/main/detailspage.png) each entery by using a views function that finds the single desired instance from the database and sending it to the details template.
 * ## Update - Delete :
 In Story 5 I added the ability to [edit](https://github.com/Driventobraise/PythonLiveProject/blob/main/editpage.png) and [delete](https://github.com/Driventobraise/PythonLiveProject/blob/main/views2.png) any database entry. During these steps I was using sqlite db and django queries to interact with the DB.
+
+<img src="https://github.com/Driventobraise/PythonLiveProject/blob/main/edited_delete2.png">
+
 # Beautiful Soup :
 During story 6 and 7 I utilized a [web scraper](https://github.com/Driventobraise/PythonLiveProject/blob/main/views4.png) to pull article summaries and their authors from dnd.wizards.com and rendered it on my articles page. In the future I would like to add direct links to the full articles and display the images attached to the articles.
 
