@@ -1,5 +1,5 @@
 # Dungeons and Dragons App
-For two weeks my teammates and I worked on creating  Apps with Django. On this full stack project we each were responsible for our own applications, so I focused my time on building an App where you could store and update characters for your Dungeons and Dragons campaign. I also utilized Beautiful Soup for web scrapping to link relevant articles. Below is an overview of what I accomplished over the project.
+For two weeks my teammates and I worked on creating  Apps with Django. On this full stack project we each were responsible for our own applications, so I focused my time on building an App where you could store and update characters for your Dungeons and Dragons campaign. I also utilized Beautiful Soup for web scraping to link relevant articles. Below is an overview of what I accomplished over the project.
 # [HOME](https://github.com/Driventobraise/PythonLiveProject/blob/main/home2.png)| [CHARACTERS](https://github.com/Driventobraise/PythonLiveProject/blob/main/add_character3.png)| [INDEX](https://github.com/Driventobraise/PythonLiveProject/blob/main/indexpg2.png)| [ARTICLES](https://github.com/Driventobraise/PythonLiveProject/blob/main/webscraperpg2.png)
 Above are links to the app layout. I utilized bootstrap and basic css for styling, in the future I would like to refine my look for the app.
 # Starting my app :
